@@ -1,15 +1,15 @@
 /*Search bar*/
 .searchBar-wrapper {
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
 .select-beverage {
-
-}
-
-.search-input {
-
-}
-
-.select-price {
-
+  display:flex;
+  flex-direction: column;
+  position: relative;
+  width:250px;
+  height:20px;
+  text-align:center;
 }

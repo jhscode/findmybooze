@@ -31,25 +31,13 @@ class SearchBar extends Component {
     return (
       <div className="searchBar-wrapper">
         <form>
-          <select className="select-beverage">
-            <option>Choose bervage</option>
-            <option>Beer</option>
-            <option>Wine</option>
-            <option>Cooler</option>
-          </select>
           <input
-          className="select-input"
-          placeholder="Where are you located?"
-          value={this.state.term}
-          onChange={this.onInputChange}
+            className="select-input"
+            placeholder="Where are you located?"
+            value={this.state.term}
+            onChange={this.onInputChange}
           >
           </input>
-          <select className="select-price">
-            <option>Choose price range</option>
-            <option>$</option>
-            <option>$$</option>
-            <option>$$$</option>
-          </select>
           <span>
             <button type="submit">Submit</button>
           </span>

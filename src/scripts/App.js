@@ -6,8 +6,6 @@ import SearchBar from './components/SearchBar';
 
 const dbRef = firebase.database();
 
-console.log(process.env.REACT_APP_API_KEY);
-
 class App extends Component {
   render() {
     return (

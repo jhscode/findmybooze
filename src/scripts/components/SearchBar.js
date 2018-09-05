@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 const apiKey = process.env.REACT_APP_API_KEY;
-const url = `http://lcboapi.com/products?access_key=${apiKey}`
+const urlProduct = `http://lcboapi.com/products?access_key=${apiKey}`
 
 class SearchBar extends Component {
 
@@ -18,12 +18,15 @@ class SearchBar extends Component {
   }
 
   componentDidMount() {
-    axios.get(url).then(res => {
-      console.log(res);
-    })
+    axios.get(urlProduct)
+      .then(res => {
+        const data=res.data.result[0];
+        console.log(data);
+      })
   }
 
   onInputChange(event) {
+    console.log(event.target.value);
     this.setState({ term: event.target.value });
   }
 

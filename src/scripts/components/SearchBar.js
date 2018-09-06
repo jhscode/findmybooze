@@ -17,15 +17,13 @@ class SearchBar extends Component {
     this.onInputChange = this.onInputChange.bind(this);
   }
 
-  componentDidMount() {
-    axios.get(urlProduct)
-      .then(res => {
-        const data=res.data.result[0];
-        console.log(data);
-      })
-  }
-
   onInputChange(event) {
+    event.preventDefault();
+    const url = `${urlProduct}&q=${this.state.term}`
+    axios.get(url)
+      .then(res => {
+        console.log(res);
+      })
     console.log(event.target.value);
     this.setState({ term: event.target.value });
   }
@@ -33,17 +31,12 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="searchBar-wrapper">
-        <form>
+        <form >
           <input
-            className="select-input"
-            placeholder="Where are you located?"
             value={this.state.term}
             onChange={this.onInputChange}
-          >
-          </input>
-          <span>
-            <button type="submit">Submit</button>
-          </span>
+            placeholder="What are you thirsty for?"
+          ></input>
         </form>
       </div>
 

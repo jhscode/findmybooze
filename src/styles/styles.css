@@ -5,8 +5,3 @@
   justify-content: space-around;
   align-items:stretch;
 }
-
-.select-input {
-    margin-left: 20px;
-    flex: 1;
-}

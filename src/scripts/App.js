@@ -6,11 +6,25 @@ import SearchBar from './components/SearchBar';
 
 const dbRef = firebase.database();
 
+const apiKey = process.env.REACT_APP_API_KEY;
+const ROOT_URL = `http://lcboapi.com/products?access_key=${apiKey}`
+
 class App extends Component {
+  
+  searchName = (e) => {
+    e.preventDefault();
+    const search = e.target.elements.search.value;
+    const url = `${ROOT_URL}&q=${search}`
+    axios.get(url)
+    .then((res) => {
+      console.log(res);
+    })
+  }
+
   render() {
     return (
       <div>
-        <SearchBar />
+        <SearchBar searchName={this.searchName}/>
       </div>
     );
   }

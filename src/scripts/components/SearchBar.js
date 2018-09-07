@@ -27,8 +27,13 @@ class SearchBar extends Component {
           ></input>
           <button>Submit</button>
         </form>
+        <select>
+          How much do you want to pay?
+          <option value="priceOne">$</option>
+          <option value="priceTwo">$$</option>
+          <option value="priceThree">$$$</option>
+        </select>
       </div>
-
     );
   } 
 }

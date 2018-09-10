@@ -3,6 +3,7 @@ import axios from 'axios';
 import firebase from './firebase';
 import '../styles/styles.css';
 import SearchBar from './components/SearchBar';
+import BeverageList from './components/BeverageList';
 
 const dbRef = firebase.database();
 const apiKey = process.env.REACT_APP_API_KEY;
@@ -13,25 +14,26 @@ class App extends Component {
     data: []
   }
 
-  searchName = (e) => {
+  searchName = async (e) => {
     e.preventDefault();
     const productType = e.target.elements.type.value;
-    const url = `${ROOT_URL}&q=${productType}&order=price_in_cents.desc`;
-    axios.get(url)
-    .then((res) => {
-      console.log(res);
-      console.log(res.data.result);
-      this.setState = ({
-        data: res.data.result
-      })
-    })
-    e.target.reset();
+    const url = await fetch(`${ROOT_URL}&q=${productType}`);
+    const data = await url.json();
+    console.log(data);
+    this.setState({
+      data: data.result
+    });
   }
 
   render() {
     return (
       <div>
-        <SearchBar searchName={this.searchName}/>
+        <SearchBar 
+        searchName={ this.searchName }
+        />
+        <BeverageList
+        data={ this.state.data }
+        />
       </div>
     );
   }

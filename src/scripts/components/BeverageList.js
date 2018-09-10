@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const BeverageList = (props) => {
-  return (
-    <div>
-      List of beverages
-    </div>
-  )
+class BeverageList extends Component {
+  render() {
+    return (
+      <div>
+        {this.props.data.map((data) => {
+          return <div key={data.id}>{data.name}</div>
+        })}
+      </div>
+    )
+  }
 }
 
 export default BeverageList;

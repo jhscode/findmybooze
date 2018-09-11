@@ -11,17 +11,20 @@ const ROOT_URL = `http://lcboapi.com/products?access_key=${apiKey}`
 
 class App extends Component {
   state = {
-    data: []
+    data: [],
+    price:''
   }
 
   searchName = async (e) => {
     e.preventDefault();
+    const price = e.target.elements.price.value;
     const productType = e.target.elements.type.value;
-    const url = await fetch(`${ROOT_URL}&q=${productType}`);
+    const url = await fetch(`${ROOT_URL}&q=${productType}&order=price_in_cents.desc`);
     const data = await url.json();
     console.log(data);
     this.setState({
-      data: data.result
+      data: data.result,
+      price: price
     });
   }
 
@@ -33,6 +36,7 @@ class App extends Component {
         />
         <BeverageList
         data={ this.state.data }
+        price= {this.state.price}
         />
       </div>
     );

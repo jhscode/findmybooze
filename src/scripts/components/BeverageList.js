@@ -5,6 +5,7 @@ class BeverageList extends Component {
     return (
       <div>
         {this.props.data.map((data) => {
+          console.log(data);
           return <div key={data.id}>{data.name}</div>
         })}
       </div>

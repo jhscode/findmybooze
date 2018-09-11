@@ -19,7 +19,7 @@ class App extends Component {
     e.preventDefault();
     const price = e.target.elements.price.value;
     const productType = e.target.elements.type.value;
-    const url = await fetch(`${ROOT_URL}&q=${productType}&order=price_in_cents.desc`);
+    const url = await fetch(`${ROOT_URL}&q=${productType}`);
     const data = await url.json();
     console.log(data);
     this.setState({

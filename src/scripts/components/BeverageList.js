@@ -6,7 +6,13 @@ class BeverageList extends Component {
       <div>
         {this.props.data.map((data) => {
           console.log(data);
-          return <div key={data.id}>{data.name}</div>
+          return (
+            <div key={data.id}>
+            {data.name}
+              <img src={data.image_thumb_url} ></img>
+            </div>
+
+          );
         })}
       </div>
     )

@@ -5,14 +5,10 @@ class BeverageList extends Component {
     return (
       <div>
         {this.props.data.map((data) => {
-          console.log(data);
-          return (
-            <div key={data.id}>
+          <ul key={data.id}>
             {data.name}
-              <img src={data.image_thumb_url} ></img>
-            </div>
-
-          );
+            <img src={data.image_thumb_url} ></img>
+          </ul>
         })}
       </div>
     )

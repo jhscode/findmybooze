@@ -11,11 +11,10 @@ class SearchBar extends Component {
             name="type"
             placeholder="What are you thirsty for?"
           ></input>
-        <select name="price">          
-          <option value="selectPrice">Select Price</option>
-          <option value="priceOne">$</option>
-          <option value="priceTwo">$$</option>
-          <option value="priceThree">$$$</option>
+        <label>Price</label>
+        <select name="price">
+          <option value="cheap">Cheap</option>
+          <option value="expensive">Expensive</option>
         </select>
           <button>Submit</button>
         </form>

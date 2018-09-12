@@ -36,7 +36,7 @@ class App extends Component {
         />
         <BeverageList
         data={ this.state.data }
-        price= {this.state.price}
+        price= { this.state.price }
         />
       </div>
     );

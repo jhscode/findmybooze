@@ -12,7 +12,7 @@ const ROOT_URL = `http://lcboapi.com/products?access_key=${apiKey}`
 class App extends Component {
   state = {
     data: [],
-    price:''
+    price:'cheap'
   }
 
   searchName = async (e) => {
@@ -21,7 +21,6 @@ class App extends Component {
     const productType = e.target.elements.type.value;
     const url = await fetch(`${ROOT_URL}&q=${productType}`);
     const data = await url.json();
-    console.log(data);
     this.setState({
       data: data.result,
       price: price

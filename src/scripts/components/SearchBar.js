@@ -9,14 +9,15 @@ class SearchBar extends Component {
           <input
             type="text"
             name="type"
+            required
             placeholder="What are you thirsty for?"
-          ></input>
+          />
         <label>Price</label>
         <select name="price">
           <option value="cheap">Cheap</option>
           <option value="expensive">Expensive</option>
         </select>
-          <button>Submit</button>
+          <button className="formButton">Submit</button>
         </form>
       </div>
     );

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import firebase from './firebase';
 import '../styles/styles.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import SearchBar from './components/SearchBar';
 import BeverageList from './components/BeverageList';
 
@@ -30,6 +32,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header />
         <SearchBar 
         searchName={ this.searchName }
         />
@@ -37,6 +40,7 @@ class App extends Component {
         data={ this.state.data }
         price= { this.state.price }
         />
+        <Footer />
       </div>
     );
   }

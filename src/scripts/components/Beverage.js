@@ -16,7 +16,7 @@ export default class Beverage extends Component {
             <img  
               className="beverageImage"
               onClick={ this.onImageClick }
-              src={ data.image_thumb_url } 
+              src={ data.image_thumb_url }
               alt={ data.name } ></img>
             <div className="beveragePrice">
               { data.price_in_cents }

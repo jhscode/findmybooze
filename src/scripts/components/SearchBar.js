@@ -12,6 +12,12 @@ class SearchBar extends Component {
             required
             placeholder="What are you thirsty for?"
           />
+          <input
+          type="text"
+          name="map"
+          required
+          placeholder="Where are you?"
+          />
         <label>Price</label>
         <select name="price">
           <option value="cheap">Cheap</option>

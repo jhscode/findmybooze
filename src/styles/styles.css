@@ -1,3 +1,6 @@
+ul {
+  list-style: none;
+}
 /* Beverage list */
 .beveragelist-container {
   display: flex;

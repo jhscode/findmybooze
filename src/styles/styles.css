@@ -1,3 +1,15 @@
+/* Beverage list */
+.beveragelist-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.beveragelist {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+
 /*Search bar*/
 .searchBar-wrapper {
   display: flex;

@@ -1,29 +1,22 @@
 import React, { Component } from 'react';
 
 export default class Beverage extends Component {
-
+  
   onImageClick = () => {
     //do something when clicked
   }
+
   render() {
+    const { image_thumb_url, name, price_in_cents } = this.props.data;
     return (
-      <div>
-        {this.props.data.map((data) => {
-          console.log(data);
-          return (
-            <ul key={ data.id }>
-              { data.name }
-            <img  
-              className="beverageImage"
-              onClick={ this.onImageClick }
-              src={ data.image_thumb_url }
-              alt={ data.name } ></img>
-            <div className="beveragePrice">
-              { data.price_in_cents }
-            </div>
-            </ul>
-          );
-        })}
+      <div className="beverage-container">
+        <img  
+          className="beverageImage"
+          onClick={ this.onImageClick }
+          src={ image_thumb_url }
+          alt={ name } ></img>
+          <li>{ name }</li>
+          <li>{ price_in_cents }</li>
       </div>
     );
   }

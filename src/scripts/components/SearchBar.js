@@ -15,7 +15,6 @@ class SearchBar extends Component {
           <input
           type="text"
           name="map"
-          required
           placeholder="Where are you?"
           />
         <label>Price</label>

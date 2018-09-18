@@ -1,6 +1,19 @@
 ul {
   list-style: none;
 }
+
+/* Header Wrapper */
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Searchbar Wrapper */
+.searchBar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 /* Beverage list */
 .beveragelist-container {
   display: flex;

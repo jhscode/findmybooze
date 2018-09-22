@@ -10,13 +10,15 @@ export default class Beverage extends Component {
     const { image_thumb_url, name, price_in_cents } = this.props.data;
     return (
       <div className="beverage-container">
+        <div className="beverage-card">
         <img  
           className="beverageImage"
           onClick={ this.onImageClick }
           src={ image_thumb_url }
           alt={ name } ></img>
-          <li>{ name }</li>
-          <li>{ price_in_cents }</li>
+        <h3>{ name }</h3>
+        <p>{ price_in_cents }</p>
+        </div>
       </div>
     );
   }

@@ -2,33 +2,40 @@ ul {
   list-style: none;
 }
 
-/* Header Wrapper */
+/* Header */
 .header-wrapper {
   display: flex;
   justify-content: center;
 }
 
-/* Searchbar Wrapper */
+.header-title {
+  flex: 0 1 auto;
+}
+
+/* Searchbar */
 .searchBar-wrapper {
   display: flex;
   justify-content: center;
-  
 }
 
-/* Beverage list */
+/* Beverage */
 .beveragelist-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.beveragelist {
-  display: inline-flex;
-  flex-wrap: wrap;
+.beverage-car {
+  margin: 20px;
+  padding: 10px;
+  border: 10px;
+}
+.beverage-card:hover {
+  transform: scale(1.2);
 }
 
 
-/*Search bar*/
-.searchBar-wrapper {
-  display: flex;
+/* Beverage List */
+.beveragelist {
+  display: inline-flex;
   flex-wrap: wrap;
 }

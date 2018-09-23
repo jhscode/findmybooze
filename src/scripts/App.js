@@ -43,10 +43,10 @@ class App extends Component {
         data={ this.state.data }
         price= { this.state.price }
         />
-        <GoogleMaps 
+        {/* <GoogleMaps 
         lat={this.state.lat}
         lng={this.state.lng}
-        />
+        /> */}
         <Footer />
       </div>
     );

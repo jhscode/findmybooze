@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import SearchBar from './components/SearchBar';
 import BeverageList from './components/BeverageList';
+import GoogleMaps from './components/GoogleMaps';
 
 const dbRef = firebase.database();
 const apiKey = process.env.REACT_APP_API_KEY;
@@ -14,7 +15,9 @@ const ROOT_URL = `http://lcboapi.com/products?access_key=${apiKey}`
 class App extends Component {
   state = {
     data: [],
-    price:'cheap'
+    price:'cheap',
+    lng: null,
+    lat: null
   }
 
   searchName = async (e) => {
@@ -39,6 +42,10 @@ class App extends Component {
         <BeverageList
         data={ this.state.data }
         price= { this.state.price }
+        />
+        <GoogleMaps 
+        lat={this.state.lat}
+        lng={this.state.lng}
         />
         <Footer />
       </div>

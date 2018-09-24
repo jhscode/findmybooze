@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <p>
-        Footer Page
+        Made By James Shin
       </p>
     </footer>
   )

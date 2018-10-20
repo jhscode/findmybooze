@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Beverage extends Component {
   
   onImageClick = () => {
-    //do something when clicked
+        
   }
 
   render() {

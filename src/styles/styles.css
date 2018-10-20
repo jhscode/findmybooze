@@ -52,6 +52,6 @@ header {
 
 /* Beverage List */
 .beveragelist {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
 }
